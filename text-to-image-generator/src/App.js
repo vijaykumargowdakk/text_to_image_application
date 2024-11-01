@@ -1,3 +1,5 @@
+// Updated src/App.js
+
 import React, { useState } from 'react';
 import { queryImage } from './utils/api';
 import InputField from './components/InputField';
@@ -39,7 +41,7 @@ function App() {
       <div className="flex flex-col md:flex-row w-full max-w-6xl gap-8">
         {/* Left Box for inputs */}
         <div className="w-full md:w-1/3 bg-white p-8 rounded-2xl shadow-xl transition-transform transform hover:scale-105">
-          <h1 className="text-4xl font-extrabold text-purple-700 mb-6 text-center">Text to Image Generator</h1>
+          <h1 className="text-4xl font-extrabold text-purple-700 mb-6 text-center">Text to Image Generators</h1>
 
           <InputField prompt={prompt} setPrompt={setPrompt} />
 
