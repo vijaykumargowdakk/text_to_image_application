@@ -82,7 +82,7 @@ function App() {
 
       <footer className="mt-8 text-center">
                 <p className="text-white text-lg font-medium">
-                    Created by Vijay Kumar Gowda K K
+                    Created by : Vijay Kumar Gowda K K
                 </p>
                 <div className="flex justify-center items-center gap-4 mt-2">
                     <a
