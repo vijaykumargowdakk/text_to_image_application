@@ -36,15 +36,15 @@ function App() {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 p-4 animate-gradient">
-      <div className="flex flex-col md:flex-row w-full max-w-6xl">
+      <div className="flex flex-col md:flex-row w-full max-w-6xl gap-8">
         {/* Left Box for inputs */}
-        <div className="w-full md:w-1/3 bg-white p-6 rounded-lg shadow-xl mb-6 md:mb-0">
-          <h1 className="text-3xl font-bold text-purple-700 mb-6 text-center">Text to Image Generator</h1>
+        <div className="w-full md:w-1/3 bg-white p-8 rounded-2xl shadow-xl transition-transform transform hover:scale-105">
+          <h1 className="text-4xl font-extrabold text-purple-700 mb-6 text-center">Text to Image Generator</h1>
 
           <InputField prompt={prompt} setPrompt={setPrompt} />
 
           <select
-            className="mb-4 p-2 rounded border w-full"
+            className="mb-4 p-3 rounded-md border w-full focus:outline-none focus:ring-2 focus:ring-purple-500 transition"
             value={model}
             onChange={(e) => setModel(e.target.value)}
           >
@@ -57,12 +57,12 @@ function App() {
 
           <GenerateButton onGenerate={handleGenerate} />
 
-          {loading && <p className="text-blue-500 mt-4 text-center">Generating image, please wait...</p>}
+          {loading && <p className="text-blue-500 mt-4 text-center animate-pulse">Generating image, please wait...</p>}
           {error && <p className="text-red-500 mt-4 text-center">{error}</p>}
           {imageUrl && (
             <button
               onClick={handleDownload}
-              className="mt-4 px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 w-full"
+              className="mt-4 px-4 py-3 bg-green-500 text-white rounded-md hover:bg-green-600 w-full shadow-lg transition-transform transform hover:scale-105"
             >
               Download Image
             </button>
@@ -71,19 +71,19 @@ function App() {
 
         {/* Right Box for Image display */}
         {imageUrl && (
-          <div className="w-full md:w-2/3 flex flex-col items-center justify-center">
+          <div className="w-full md:w-2/3 flex flex-col items-center justify-center transition-all duration-500">
             <ImageDisplay imageUrl={imageUrl} />
           </div>
         )}
       </div>
 
       <footer className="mt-10 text-center">
-        <p className="text-white">Created by Vijay Kumar Gowda K K</p>
-        <div className="flex justify-center mt-2">
-          <a href="https://github.com/vijaykumargowdakk" className="text-yellow-400 mx-2">
+        <p className="text-white text-lg font-semibold">Created by Vijay Kumar Gowda K K</p>
+        <div className="flex justify-center mt-4 gap-4">
+          <a href="https://github.com/vijaykumargowdakk" className="text-yellow-400 transition-transform transform hover:scale-110">
             <i className="fab fa-github fa-2x"></i>
           </a>
-          <a href="mailto:rvit21bis065.rvitm@rvei.edu.in" className="text-yellow-400 mx-2">
+          <a href="mailto:rvit21bis065.rvitm@rvei.edu.in" className="text-yellow-400 transition-transform transform hover:scale-110">
             <i className="fas fa-envelope fa-2x"></i>
           </a>
         </div>
