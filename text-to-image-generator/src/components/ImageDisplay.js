@@ -1,14 +1,16 @@
-// src/components/ImageDisplay.js
-
 import React from 'react';
 
 function ImageDisplay({ imageUrl }) {
   return (
-    <div className="mt-4">
+    <div className="mt-4 w-full flex justify-center">
       {imageUrl ? (
-        <img src={imageUrl} alt="Generated" className="rounded shadow-lg max-w-full h-auto" />
+        <img
+          src={imageUrl}
+          alt="Generated"
+          className="rounded shadow-lg w-full h-auto max-h-[70vh] object-contain"
+        />
       ) : (
-        <p className="text-white">No image generated yet. Enter a prompt and click "Generate Image."</p>
+        <p className="text-gray-700">No image generated yet. Enter a prompt and click "Generate Image."</p>
       )}
     </div>
   );
