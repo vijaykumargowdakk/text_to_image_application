@@ -6,7 +6,6 @@ import InputField from './components/InputField';
 import GenerateButton from './components/GenerateButton';
 import ImageDisplay from './components/ImageDisplay';
 import { FaGithub, FaEnvelope } from 'react-icons/fa';
-import { FaBeer } from 'react-icons/fa';
 
 function App() {
   const [prompt, setPrompt] = useState('');
